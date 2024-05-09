@@ -1,0 +1,168 @@
+.news {
+  padding-bottom: 160px;
+
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    color: var(--dark);
+    margin-bottom: var(--mb);
+  }
+
+  &__img {
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 478px;
+    height: 100%;
+    grid-column: 4 span;
+    background-color: var(--light-gray);
+    box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.69);
+
+    @include tablet {
+      min-height: 420px;
+    }
+  }
+
+  &__descr {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    min-height: 227px;
+    height: 100%;
+    // background-color: var(----light-gray);
+  }
+
+  &__descr-top {
+    margin-bottom: auto;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--dark);
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  }
+
+  &__descr-bottom {
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--accent);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &__desc:focus-visible {
+    outline: none;
+    outline: 1px solid var(--accent);
+    outline-offset: 2px;
+
+  }
+
+  &__desc:focus-visible {
+    outline: none;
+    outline: 1px solid var(--accent);
+    outline-offset: 2px;
+
+  }
+
+  &__desc:hover {
+    color: rgb(146, 106, 141);
+  }
+
+  &__desc:active {
+    color: rgb(87, 62, 83);
+  }
+
+
+  &__date {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--gray);
+  }
+
+
+}
+
+.news-wrapper {
+  position: relative;
+}
+
+.news-btn {
+  position: absolute;
+  top: 105%;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // transform: translateX(-50%);
+  z-index: 500;
+  background-color: var(--light);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+  svg {
+    width: 30px;
+  }
+
+  &--prev {
+    left: 43%;
+
+    @include tablet {
+      left: 40%;
+    }
+
+    @include small-tablet {
+      left: 20%;
+    }
+
+  }
+
+  &--next {
+    right: 43%;
+
+    @include tablet {
+      right: 40%;
+    }
+
+    @include small-tablet {
+      right: 20%;
+    }
+  }
+
+
+}
+
+.swiper-slide {
+  height: auto;
+
+}
+
+

@@ -1,0 +1,53 @@
+.present {
+  padding-bottom: var(--pb);
+
+  &__map {
+    width: calc(100% - 21px);
+
+    svg {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+
+    }
+  }
+
+
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    color: var(--dark);
+    margin-bottom: var(--mb);
+  }
+
+  path {
+    fill: #D9D9D9;
+  }
+
+  &__link path {
+
+    fill: #D9D9D9;
+    transition: fill .3s ease-in-out;
+
+  }
+
+  &__link:hover path {
+    fill: var(--light-gray);
+  }
+
+
+  &__text {
+    path {
+      fill: #333;
+    }
+
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+}
